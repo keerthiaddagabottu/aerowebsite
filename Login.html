@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In</title>
+	<link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="Mystyles2.css">
+	<script>
+		//user validations
+		function loginValidation(){
+			
+			var uname=document.myform.username.value;
+		   
+			var password=document.myform.password.value;
+			if(uname==null || uname==" "){
+				alert("Name cannot be blank")
+				return false;
+			}
+			else if(password.length<6){
+				alert("password Must be 6 leters")
+				return false;
+			}
+			return true;
+		}
+
+		
+	</script>
+	<style>
+	nav{
+		margin-top: 16px;
+        margin-left: 1px;
+    	margin-right: 2px;
+    	font-size: 18px;
+	}
+		nav ul li a{
+			font-size: 18px;
+		}
+	</style>
+</head>
+
+<body background="signin.jpg">
+    <nav>
+        <ul>
+            <li><a href="./Home.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./Contact.html">Contact</a></li>
+            <li><a href="./Signin.html">Signin</a></li>
+            <li><a href="./Login.html">Login</a></li>
+			<li><a href="./Form.html">Booking</a></li>
+            
+        </ul>
+    </nav><br>
+	
+			
+	
+<div class="signin-container">
+<h2>Login Form</h2>
+<form name="myform" action="Loginsuccess.html" onsubmit="return loginValidation(this)">
+<form id="signin-form">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username"><br><br>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password"><br><br>
+<button id="signin-btn">Login</button>
+</form>
+</form>
+<div id="error-message"></div>
+
+<script src="(link unavailable)"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+	
+		
